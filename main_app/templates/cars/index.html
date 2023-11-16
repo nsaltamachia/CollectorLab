@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="background-image-3">
 
 <h1>View All The Cars</h1>
 
 {% for car in cars %}
   <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ car.model }}</span>
-      <p>Make: {{ car.make }}</p>
-      <p>Year: {{ car.year }}</p>
-      <p>Engine: {{ car.engine }}</p>
-    </div>
+    <a href="{% url 'detail' car.id%}">
+        <div class="card-content">
+            <span class="card-title">{{ car.model }}</span>
+            <p>Make: {{ car.make }}</p>
+            <p>Year: {{ car.year }}</p>
+            <p>Engine: {{ car.engine }}</p>
+        </div>
+    </a>
+  </div>
   </div>
 {% endfor %}
 

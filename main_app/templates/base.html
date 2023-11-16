@@ -3,23 +3,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bitchin' Car Collector</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'main_app/static/css/style.css' %}">
 </head>
 <body>
   <header class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
         <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Bitchin' Car Collector</a></li>
+          <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Bitchin' Car Collector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">About the Car Collector</a></li>
-          <li><a href="/cars">View All The Cars</a></li>
+          <li><a href="{% url 'about' %}">About the Car Collector</a></li>
+          <li><a href="{% url 'index' %}">View All The Cars</a></li>
         </ul>
       </div>
     </nav>

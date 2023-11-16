@@ -12,3 +12,35 @@ footer.page-footer {
   padding-top: 0;
   text-align: right;
 }
+
+.background-image-1 {
+    background-image: url('image_assets/mustang grille.jpeg');
+    /* Additional styling for background image */
+}
+
+.background-image-2 {
+    background-image: url('image_assets/gto.jpg');
+    /* Additional styling for background image */
+}
+
+.background-image-3 {
+    background-image: url('image_assets/challenger_front.jpg');
+    /* Additional styling for background image */
+}
+
+.background-image-4 {
+    background-image: url('image_assets/open_road.jpg');
+    /* Additional styling for background image */
+}
+
+.about-body-headline {
+text-align: center;
+}
+
+.about-body-text {
+text-align: center;
+}
+
+.left brand-logo {
+  font-family: 'Graduate', serif;
+}
