@@ -4,6 +4,8 @@ body {
   flex-direction: column;
 }
 
+
+
 main {
   flex: 1 0 auto;
 }
@@ -13,23 +15,27 @@ footer.page-footer {
   text-align: right;
 }
 
-.background-image-1 {
-    background-image: url('image_assets/mustang grille.jpeg');
+.home {
+    background: url("../car/images/gto.jpg") ;
+    background-position: center;
+    background-size: cover;
     /* Additional styling for background image */
+    
 }
 
-.background-image-2 {
-    background-image: url('image_assets/gto.jpg');
-    /* Additional styling for background image */
+.about {
+    background: url("../car/images/mustang_grille.jpeg") ;
+    background-position: center;
+    background-size: cover;
 }
 
 .background-image-3 {
-    background-image: url('image_assets/challenger_front.jpg');
+    background-image: 'image_assets/challenger_front.jpg';
     /* Additional styling for background image */
 }
 
 .background-image-4 {
-    background-image: url('image_assets/open_road.jpg');
+    background-image: url'image_assets/open_road.jpg';
     /* Additional styling for background image */
 }
 
@@ -43,4 +49,9 @@ text-align: center;
 
 .left brand-logo {
   font-family: 'Graduate', serif;
+}
+
+h1 {
+  font-family: 'Graduate', serif;
+  color: white;
 }

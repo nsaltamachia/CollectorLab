@@ -1,4 +1,4 @@
-{% load static %}
+{%load static%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +11,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bitchin' Car Collector</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="{% static 'main_app/static/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
   <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" style="background-color: rgb(79, 12, 12);">
         <ul>
           <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Bitchin' Car Collector</a></li>
         </ul>
@@ -30,8 +30,9 @@
   <main class="container">
     {% block content %}
     {% endblock %}
+  
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer" style="background-color: rgb(79, 12, 12);">
     <div class="right">All Rights Reserved, &copy; 2023 Car Collector &nbsp;</div>
   </footer>
 </body>
