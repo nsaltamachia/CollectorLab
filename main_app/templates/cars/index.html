@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>View All The Cars</h1>
+
+{% for car in cars %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ car.model }}</span>
+      <p>Make: {{ car.make }}</p>
+      <p>Year: {{ car.year }}</p>
+      <p>Engine: {{ car.engine }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
