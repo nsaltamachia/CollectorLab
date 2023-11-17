@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="background-image-4"></div>
+
+<body class="detail">
+  
+
+
+
 <h1>Bitchin' Car Details</h1>
 
-<div class="card">
+<div class="card" style="background-color: rgba(255, 255, 255, 0.5); color: rgb(255, 255, 255);">
   <div class="card-content">
     <span class="card-title">{{ car.model }}</span>
     <p>Make: {{ car.make }}</p>
@@ -12,5 +17,6 @@
     <p>Year: {{ car.year }}</p>
   </div>
 </div>
-</div>
+
+</body>
 {% endblock %}

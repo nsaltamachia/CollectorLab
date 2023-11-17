@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="background-image-3">
+
+<body class="cars-index">
+  
 
 <h1>View All The Cars</h1>
 
 {% for car in cars %}
-  <div class="card">
+  <div class="card" style="background-color: rgba(255, 255, 255, 0.5); color: rgb(255, 255, 255); " >
     <a href="{% url 'detail' car.id%}">
         <div class="card-content">
             <span class="card-title">{{ car.model }}</span>
@@ -15,7 +17,6 @@
         </div>
     </a>
   </div>
-  </div>
 {% endfor %}
-
+</body>
 {% endblock %}

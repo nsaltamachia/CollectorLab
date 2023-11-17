@@ -29,14 +29,36 @@ footer.page-footer {
     background-size: cover;
 }
 
-.background-image-3 {
-    background-image: 'image_assets/challenger_front.jpg';
-    /* Additional styling for background image */
+.cars-index {
+    background: url("../car/images/open_road.jpg") ;
+    background-position: center;
+    background-size: cover;
 }
 
-.background-image-4 {
-    background-image: url'image_assets/open_road.jpg';
-    /* Additional styling for background image */
+.detail {
+    background: url("../car/images/challenger_front.jpg") ;
+    background-position: center;
+    background-size: cover;
+}
+
+.car-create {
+  background: url("../car/images/mercedes.jpg") ;
+    background-position: center;
+    background-size: cover;
+}
+
+.car-create-form {
+  background-color: rgba(79, 12, 12, .8);
+  padding: 30px;
+}
+input {
+  color: white;
+  font-size: 20px;
+}
+label {
+  font-family:'Graduate', serif;
+  font-size: 25px;
+  color: white;
 }
 
 .about-body-headline {
@@ -54,4 +76,16 @@ text-align: center;
 h1 {
   font-family: 'Graduate', serif;
   color: white;
+}
+
+.card-title {
+  font-family: 'Graduate', serif;
+}
+
+.card-content {
+  font-family: 'Graduate', serif;
+  color: rgb(79, 12, 12);
+}
+.card-content:hover {
+  color: rgb(255, 255, 255);
 }
