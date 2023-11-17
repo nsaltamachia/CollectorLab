@@ -43,13 +43,19 @@ footer.page-footer {
 
 .car-create {
   background: url("../car/images/mercedes.jpg") ;
-    background-position: center;
-    background-size: cover;
+  background-position: center;
+  background-size: cover;
 }
 
 .car-create-form {
   background-color: rgba(79, 12, 12, .8);
   padding: 30px;
+}
+
+.car-confirm-delete {
+background: url("../car/images/ford_galaxie.jpg") ;
+  background-position: center;
+  background-size: cover;
 }
 input {
   color: white;
@@ -76,6 +82,7 @@ text-align: center;
 h1 {
   font-family: 'Graduate', serif;
   color: white;
+ 
 }
 
 .card-title {
@@ -89,3 +96,10 @@ h1 {
 .card-content:hover {
   color: rgb(255, 255, 255);
 }
+
+table {
+  font-family:'Graduate', serif;
+  font-size: 25px;
+  color: white;
+}
+
