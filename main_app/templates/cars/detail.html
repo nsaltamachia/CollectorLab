@@ -5,6 +5,9 @@
 
   <h1>Bitchin' Car Details</h1>
 
+  <div class="row">
+  <div class="col s6">
+
     <div class="card" style="background-color: rgba(255, 255, 255, 0.5); color: rgb(255, 255, 255);">
       <div class="card-content">
         <span class="card-title">{{ car.model }}</span>
@@ -13,10 +16,55 @@
         <p>Year: {{ car.year }}</p>
       </div>
       <div class="card-action">
-    <a href="{% url 'cars_update' car.id %}">Edit</a>
-    <a href="{% url 'cars_delete' car.id %}">Delete</a>
+        <a href="{% url 'cars_update' car.id %}">Edit</a>
+        <a href="{% url 'cars_delete' car.id %}">Delete</a>
+      </div>
+    </div>
+    </div>
+
+<div class="col s6">
+  <form class='add-fueling-form' action="{% url 'add_fueling' car.id %}" method="POST" style="background-color: rgba(79, 12, 12, .8); padding: 15px; margin-bottom: 10px;">
+    {% csrf_token %}
+    <!-- Render the inputs -->
+    {{ fueling_form.as_p }}
+    <input type="submit" class="btn" value="Add Fueling">
+  </form>
+  <br>
+  {% if car.fueled_for_today %}
+      <div class="card-panel teal-text center-align">This {{car.year}}{{car.make}}{{car.model}} has been fueld-up plenty for today.</div>
+  {% else %}
+      <div class="card-panel red-text center-align">This {{car.year}}{{car.make}}{{car.model}} might be getting a little "thirsty."</div>
+  {% endif %}
+    <table class="highlight" style="background-color: rgba(255,255,255,.7); color:rgb(79, 12, 12) ">
+      <thead>
+        <tr><th>DATE</th><th>FUELING</th></tr>
+      </thead>
+      <tbody>
+        {% for fueling in car.fueling_set.all %}
+          <tr>
+            <td>{{fueling.date}}</td>
+            <td>{{fueling.get_fuel_display}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
+
+
   </div>
 
 </body>
+<script>
+  const dateEl = document.getElementById('id_date');
+  M.Datepicker.init(dateEl, {
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true
+  });
+
+  // add additional JS to initialize select below
+  const selectEl = document.getElementById('id_fuel');
+  M.FormSelect.init(selectEl);
+</script>
 {% endblock %}
