@@ -19,6 +19,7 @@ footer.page-footer {
     background: url("../car/images/gto.jpg") ;
     background-position: center;
     background-size: cover;
+    
     /* Additional styling for background image */
     
 }
@@ -33,15 +34,31 @@ footer.page-footer {
     background: url("../car/images/open_road.jpg") ;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
+
+.features-index {
+    background: url("../car/images/open_road.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 
 .detail {
     background: url("../car/images/challenger_front.jpg") ;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .car-create {
+  background: url("../car/images/mercedes.jpg") ;
+  background-position: center;
+  background-size: cover;
+}
+
+.feature-create {
   background: url("../car/images/mercedes.jpg") ;
   background-position: center;
   background-size: cover;
@@ -52,11 +69,23 @@ footer.page-footer {
   padding: 30px;
 }
 
+.feature-create-form {
+  background-color: rgba(79, 12, 12, .8);
+  padding: 30px;
+}
+
 .car-confirm-delete {
 background: url("../car/images/ford_galaxie.jpg") ;
   background-position: center;
   background-size: cover;
 }
+
+.feature-confirm-delete {
+background: url("../car/images/ford_galaxie.jpg") ;
+  background-position: center;
+  background-size: cover;
+}
+
 input {
   color: white;
   font-size: 20px;

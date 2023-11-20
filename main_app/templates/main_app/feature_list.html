@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body class="cars-index">
+
+<h1>Available Feature List</h1>
+
+{% for feature in feature_list %}
+  <a href="{% url 'features_detail' feature.id %}">
+    <div class="card" style="background-color: rgba(255, 255, 255, 0.8); color: rgb(255, 255, 255); " >
+        <div class="card-content">
+            <span class="card-title">{{ feature.name }}</span>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+</body>
+{% endblock %}

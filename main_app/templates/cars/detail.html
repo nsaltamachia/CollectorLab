@@ -52,7 +52,54 @@
 
 
   </div>
-
+<hr>
+<div class="row" style="background-color: rgba(255,255,255,.7); color:rgb(79, 12, 12) ">
+  <div class="col s6">
+    <h3>{{ car.model }}'s Features</h3>
+    {% if car.features.count %}
+      {% for feature in car.features.all %}
+        <div class="card">
+          <div class="card-content" >
+            <span class="card-title">
+              {{ feature.name }}
+            </span>
+            <div class="card-action">
+          <form action="{% url 'remove_feature' car.id feature.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn">Remove</button>
+          </form>
+        </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No Features Selected</h5>
+    {% endif %}
+  </div>
+  <!-- Available toys will come after this line -->
+  <div class="col s6">
+  <h3>Available Features</h3>
+  {% if features.count %}
+    {% for feature in features.all %}
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">
+              {{ feature.name }}
+            </span>
+        </div>
+        <div class="card-action">
+          <form action="{% url 'assoc_feature' car.id feature.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn">Add</button>
+          </form>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <h5>This {{car.year}}{{car.make}}{{car.model}}Already Has All Available Features</h5>
+  {% endif %}
+</div>
+</div>
 </body>
 <script>
   const dateEl = document.getElementById('id_date');

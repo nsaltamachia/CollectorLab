@@ -11,12 +11,22 @@ FUEL = (
     ('E', 'evening fueling'),
 )
 
+class Feature(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse('features_detail', kwargs = {'pk': self.id})
+
 class Car(models.Model):
     model = models.CharField(max_length=100)
     make = models.CharField(max_length=100)
     year = models.IntegerField()
     engine = models.CharField(max_length=1100)
-    
+    features = models.ManyToManyField(Feature)
+
     def fueled_for_today(self):
         return self.fueling_set.filter(date=date.today()).count() >= len(FUEL)
 
